@@ -1,15 +1,112 @@
+body {
+    font-family: trebuchet ms, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 1px solid #6a6a6a;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#config-title {
+    margin: 0 auto;
+    width: 30vw;
+    text-align: center;
+    padding-top: 5vh;
+    margin-top: 7.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#config {
+    margin: 0 auto;
+    width: 25vw;
+    height: 30vh;
+    background-color: #dcdad9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+}
+
+#config-difficulty {
+    display: flex;
+    flex-direction: column;
+}
+
+#config-theme {
+    display: none;
+}
+
+#config-backg {
+    display: none;
+}
+
+#config-char {
+    display: none;
+}
+
+.config-desc {
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+}
+
+.buttons input {
+    width: 5vw;
+    height: 10vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+#config button {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#play {
+    text-align: center;
+    margin-top: 3.5vh;
+}
+
+#play-btn {
+    border: 1px solid #ccc;
+}
+
+#game {
+    display: none;
+}
+
 #game-area {
     background-color: #f0f0f0;
     border: 2px solid #000;
     height: 500px;
     position: relative;
     width: 500px;
+    margin: 0 auto;
 }
 
 .personaje {
+    width: 50px;
     height: 50px;
     position: absolute;
-    width: 50px;
+    border: 2px solid black;
 }
 
 #player {

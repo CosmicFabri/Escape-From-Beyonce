@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escapa de Beyonce</title>
+    <title>Escape from Beyoncé</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Escapa de Beyonce</h1>
-    <div id="game-area">
-        <div id="player" class="personaje"></div>
-        <div id="beyonce" class="personaje"></div>
+    <!-- Game title -->
+    <h1>Escape from Beyoncé</h1>
+
+    <!-- Configurations title -->
+     <div id="config-title">
+        Game configuration
+     </div>
+
+    <!-- Configurations -->
+    <div id="config">
+        <div id="config-difficulty">
+            <p class="config-desc">Difficulty</p>
+            <div class="buttons">
+                <button id="easy" onclick="goTheme(this.id)">Easy</button>
+                <button id="hard" onclick="goTheme(this.id)">Hard</button>
+            </div>
+        </div>
+        <div id="config-theme">
+            <p class="config-desc">Theme</p>
+            <div class="buttons">
+                <button id="light" onclick="goBackground(this.id)">Light</button>
+                <button id="dark" onclick="goBackground(this.id)">Dark</button>
+            </div>
+        </div>
+        <div id="config-backg">
+            <p class="config-desc">Background</p>
+            <div class="buttons">
+                <input id="grass" type="image" src="graphics/grass.png" onclick="goCharacter(this.id)"/>
+                <input id="dirt" type="image" src="graphics/dirt.png" onclick="goCharacter(this.id)"/>
+                <input id="lava" type="image" src="graphics/lava.png" onclick="goCharacter(this.id)"/>
+                <input id="water" type="image" src="graphics/water.png" onclick="goCharacter(this.id)"/>
+            </div>
+        </div>
+        <div id="config-char">
+            <p class="config-desc">Character</p>
+            <div class="buttons">
+                <input id="steve" type="image" src="graphics/steve.png" onclick="enablePlay(this.id)"/>
+                <input id="alex" type="image" src="graphics/alex.jpg" onclick="enablePlay(this.id)"/>
+                <input id="creeper" type="image" src="graphics/creeper.png" onclick="enablePlay(this.id)"/>
+                <input id="pig" type="image" src="graphics/pig.png" onclick="enablePlay(this.id)"/>
+            </div>
+        </div>
     </div>
-    <audio src="single.m4a"></audio>
-    <script src="app.js"></script>
+
+    <div id="play">
+        <!-- 'Play' button -->
+        <button id="play-btn" onclick="showGame()" disabled>Play!</button>
+    </div>
+
+    <!-- Game itself -->
+    <div id="game">
+        <div id="game-area">
+            <div id="player" class="personaje"></div>
+            <div id="beyonce" class="personaje"></div>
+        </div>
+        <audio src="single.m4a"></audio>
+        <script src="app.js"></script>
+    </div>
 </body>
 </html>
